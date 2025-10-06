@@ -1,141 +1,113 @@
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, } from "react-native";
+import { router } from "expo-router";
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+
+
 export default function Index() {
   return (
-    <View
-      style={styles.containerSuperior}>
-      <Image
-        source={require("../assets/images/login.png")}
-        style={styles.imagem}
-      />
+      <View style={styles.containerSuperior}>
+        <Image
+          source={require("../.././assets/images/login.png")}
+          style={styles.imagem}
+        />
 
-      <View
-        style={styles.containerInferior}>
-        <Text style={styles.texto}>
-          BOAS VINDAS!</Text>
-        <Text style={styles.subtexto}>Pronto para organizar suas finanças? Acesse agora</Text>
+        <View style={styles.containerInferior}>
+          <Text style={styles.texto}>BOAS VINDAS!</Text>
+          <Text style={styles.subtexto}>
+            Pronto para organizar suas finanças? Acesse agora
+          </Text>
+          
+          <View style={styles.containercaixa}>
+            <TextInput
+              style={styles.a}
+              placeholder="Nome"
+              placeholderTextColor={'#a1a2a1'}
+            />
+              
+            <TextInput
+              style={styles.a}
+              placeholder="E-mail"
+              placeholderTextColor={'#a1a2a1'}
+              keyboardType="email-address"
+              autoCapitalize="none"
+            />
 
-        <View style={styles.containercaixa}>
+            <TextInput
+              style={styles.a}
+              placeholder="Senha"
+              placeholderTextColor={'#a1a2a1'}
+              secureTextEntry={true}
+            />
 
-          <TextInput
-            style={styles.a}
-            placeholder="Nome"
-            placeholderTextColor={'#a1a2a1'}
-          ></TextInput>
-            
-          <TextInput
-            style={styles.a}
-            placeholder="E-mail"
-            placeholderTextColor={'#a1a2a1'}
-          ></TextInput>
-
-          <TextInput
-            style={styles.a}
-            placeholder="Senha"
-            placeholderTextColor={'#a1a2a1'}
-           
-          ></TextInput>
-
-
-         <View>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText} >ENTRAR</Text>
-             </TouchableOpacity>
-
-
-         </View>
-
-
+            <TouchableOpacity style={styles.button} onPress={() => router.push('./homex')}>
+              <Text style={styles.buttonText}>ENTRAR</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-    </View>
   );
 }
 
-//Ordem que prefiro - Campari, by
-//Importações de imagens ou outros primeiro no stylesheet, depois ordem de containeres
-//E por fim conteúdos dos containeres
-const styles = StyleSheet.create(
-  {
-  imagem: { //I
+const styles = StyleSheet.create({
+  containerSuperior: {
+    flex: 1,
+    backgroundColor: '#fff'
+  },
+
+  imagem: {
     width: 366,
     height: 359,
-    marginTop: 55,
     borderRadius: 12,
     alignSelf: 'center',
   },
 
-  containerSuperior: { //C
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-
-
-  },
-
-  containerInferior: {//C
+  containerInferior: {
     flex: 1,
     marginTop: 40,
-    alignSelf: 'flex-start',
     justifyContent: 'flex-start',
-    gap: 5
   },
 
-
-  texto: { //c
+  texto: {
     color: 'black',
+    fontSize: 24,
     fontWeight: 'bold',
-    marginHorizontal:32,
-
+    marginHorizontal: 32,
   },
 
   subtexto: {
     color: 'black',
+    fontSize: 14,
     fontWeight: 'normal',
     marginTop: 10,
-    marginHorizontal:32,
+    marginHorizontal: 32,
+  },
+
+  containercaixa: {
+    marginHorizontal: 32,
+    marginTop: 28,
+    gap: 12,
   },
 
   a: {
-
     backgroundColor: '#eff0ef',
     height: 48,
     borderRadius: 8,
     fontSize: 16,
     fontWeight: '400',
+    paddingHorizontal: 16,
   },
 
-  logBox: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width:326,
-    height:48,
-    marginLeft: 24,
-    padding: 12
-  },
   button: {
     backgroundColor: '#da4bdd',
-    width: 326,
-    height:48,
-    borderRadius:8,
-    justifyContent:'center',
-    alignItems:'center',
-    marginTop: 56
-  },
-  buttonText:{
-    color:'white',
-    fontWeight:'bold'
-  },
-
-
-  containercaixa: {
+    height: 48,
     borderRadius: 8,
-    gap: 12,
-    marginHorizontal:32,
-    marginTop: 28
-
-
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 56,
   },
 
-
-}
-);
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});
