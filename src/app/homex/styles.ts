@@ -129,7 +129,8 @@ export const styles = StyleSheet.create({
   },
   flutuante: {
     position: "absolute",
-    bottom: 24,
+    bottom: 16,
+    marginBottom: 28,
     alignSelf: "center",
     backgroundColor: "#000",
     width: 56,

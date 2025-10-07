@@ -5,7 +5,12 @@ import { useState } from 'react';
 import { Alert, Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { months } from "../utils/months";
 import { styles } from "./styles";
+
+
+export default function HomeScreen() {
 const [selected, setSelected] = useState(months && months.length > 0 ? months[0].name : '');
+
+
 
 
 const handleLogout = () => {
@@ -28,9 +33,9 @@ const handleLogout = () => {
   );
 };
 
-export default function HomeScreen() {
   return (
     <View style={styles.container}>
+
       <View style={styles.header}>
         <Image
           source={require("../../../assets/images/avatar.jpg")}

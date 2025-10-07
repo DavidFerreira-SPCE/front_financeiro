@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 56,
+    marginTop:32
   },
 
   buttonText: {
