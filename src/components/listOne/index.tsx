@@ -8,11 +8,11 @@ type props = PressableProps & {
 }
 
 export function Month({ name, isSelected = false, ...rest }: props) {
-    const color = isSelected ? "black" : "#686968a2";
-
+    const color = isSelected? "#d000ecf8" : "black";
+//Para realizar destaque do MÊS no APP financeiro
     return (
         <Pressable style={styles.container} {...rest}>
-            <Text style={styles.name} >{name}</Text>
+            <Text style={[styles.name, {color}]}>{name}</Text>
             {isSelected && <View style={styles.line} />}
         </Pressable>
     )

@@ -11,15 +11,14 @@ type props = {
 export function MonthList({selected, onChange}: props) {
     return(
         <FlatList
-            data={[months]} //Quando criar a lista, colocar aqui
+            data={months} //Quando criar a lista, colocar aqui
             keyExtractor={(item) => item.id} // sÓ Extração
             renderItem={({ item }) => (//gerar a render da lista
                 <Month 
-                name={item.name} 
-                isSelected={item.name === selected}
-                onPress={() => onChange(item.name)}/>
+                name={item.short} 
+                isSelected={item.short === selected}
+                onPress={() => onChange(item.short)}/>
             )}
-
             horizontal
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={styles.container}

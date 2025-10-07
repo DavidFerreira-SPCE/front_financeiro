@@ -9,8 +9,9 @@ export default StyleSheet.create({
     name:
     {
         fontSize: 16,
-        fontWeight: '600'
+        fontWeight: '600', 
     },
+
     line: {
         marginTop: 4,
         width: '80%',

@@ -8,11 +8,8 @@ import { styles } from "./styles";
 
 
 export default function HomeScreen() {
-const [selected, setSelected] = useState(months && months.length > 0 ? months[0].name : '');
 
-
-
-
+  const [selected, setSelected] = useState(months && months.length > 0 ? months[0].name : '');
 const handleLogout = () => {
   Alert.alert(
     'Você está deslogando...',
@@ -100,7 +97,7 @@ const handleLogout = () => {
 
       {/* aqui vai o ultimo Botão Flutuante */}
       <TouchableOpacity style={styles.flutuante}>
-        <Ionicons name="add" size={28} color="#fff" />
+        <Ionicons name="add" size={28} color="#fff"/>
       </TouchableOpacity>
     </View>
   );
