@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
 
   containerInferior: {
     flex: 1,
-    marginTop: 40,
+    marginTop: 16,
     justifyContent: 'flex-start',
   },
 

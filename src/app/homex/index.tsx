@@ -1,12 +1,32 @@
 import MonthList from "@/src/components/list";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { router } from "expo-router";
 import { useState } from 'react';
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Alert, Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { months } from "../utils/months";
 import { styles } from "./styles";
+const [selected, setSelected] = useState(months && months.length > 0 ? months[0].name : '');
 
-const [selected, setSelected] = useState(months[0].name);
 
+const handleLogout = () => {
+  Alert.alert(
+    'Você está deslogando...',
+    'Deseja realmente fazer isso?',
+    [
+      {
+        text: 'Cancelar',
+        onPress: () => console.log('Cancelado'),
+        style: 'cancel'
+      },
+      {
+        text: 'Deslogar',
+        onPress: () => router.back(),
+        style: 'destructive'
+      }
+    ],
+    { cancelable: true }
+  );
+};
 
 export default function HomeScreen() {
   return (
@@ -20,9 +40,9 @@ export default function HomeScreen() {
           <Text style={styles.saudacao}>OLÁ, SR. CAMPARI!</Text>
           <Text style={styles.subtitle}>Vamos organizar suas finanças?</Text>
         </View>
-        <TouchableOpacity style={styles.logout}>
+        <TouchableOpacity style={styles.logout} onPress={handleLogout}>
           <Text>
-            <Ionicons name="exit-outline" size={22} color="#b30000ff"/>  {/*aqui está o botão de sair exit*/}
+            <Ionicons name="exit-outline" size={22} color="#b30000ff" />
           </Text>
         </TouchableOpacity>
       </View>
