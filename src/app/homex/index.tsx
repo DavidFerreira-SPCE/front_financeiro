@@ -1,6 +1,8 @@
+// ADICIONE este import no topo do arquivo:
 import { styles } from '@/src/app/homex/styles';
 import LancamentosList from "@/src/components/lancamentosList";
 import MonthList from "@/src/components/list";
+import ModalNovoLancamento from "@/src/components/modal";
 import OrcamentoCard from "@/src/components/orcamentoCard";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
@@ -10,6 +12,8 @@ import { months } from "../utils/months";
 
 export default function HomeScreen() {
   const [selected, setSelected] = useState(months && months.length > 0 ? months[0].name : '');
+  const [mostrarModal, setMostrarModal] = useState(false);
+
   
   const handleLogout = () => {
     Alert.alert(
@@ -61,10 +65,13 @@ export default function HomeScreen() {
         <LancamentosList />
       </ScrollView>
 
-      {/* Botão Flutuante */}
-      <TouchableOpacity style={styles.flutuante}>
-        <Ionicons name="add" size={28} color="#fff"/>
-      </TouchableOpacity>
-    </View>
+      {/* Botão Flutuante */}    
+<TouchableOpacity style={styles.flutuante} onPress={() => setMostrarModal(true)}>
+  <Ionicons name="add" size={28} color="#fff" />
+</TouchableOpacity>
+
+   {/* Adicione logo abaixo do botão: */}
+  <ModalNovoLancamento visible={mostrarModal} onClose={() => setMostrarModal(false)} />
+</View>
   );
 }
