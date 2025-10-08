@@ -51,82 +51,6 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#a020f0",
   },
-  budgetCard: {
-    backgroundColor: "#111",
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 20,
-  },
-  cardHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 8,
-  },
-  cardTitle: {
-    color: "#fff",
-    fontWeight: "bold",
-    fontSize: 14,
-  },
-  cardSubtitle: {
-    color: "#aaa",
-    marginBottom: 12,
-  },
-  budgetButton: {
-    backgroundColor: "#a020f0",
-    paddingVertical: 12,
-    borderRadius: 8,
-    alignItems: "center",
-    marginBottom: 16,
-  },
-  orcamentotButtonText: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
-  cardFooter: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  cardFooterText: {
-    color: "#fff",
-    fontSize: 16,
-    textAlign: "center",
-  },
-  lancamentos: {
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    padding: 16,
-  },
-  lancHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 12,
-  },
-  lancTitle: {
-    fontWeight: "bold",
-    fontSize: 14,
-  },
-  lancBadge: {
-    backgroundColor: "#eee",
-    borderRadius: 12,
-    paddingHorizontal: 10,
-    paddingVertical: 2,
-  },
-  lancBadgeText: {
-    fontSize: 12,
-    fontWeight: "bold",
-    color: "#333",
-  },
-  lancEmpty: {
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 20,
-  },
-  lancEmptyText: {
-    marginTop: 8,
-    textAlign: "center",
-    color: "#666",
-    fontSize: 13,
-  },
   flutuante: {
     position: "absolute",
     bottom: 16,
@@ -138,7 +62,7 @@ export const styles = StyleSheet.create({
     borderRadius: 28,
     justifyContent: "center",
     alignItems: "center",
-  },
+  }
 });
 
 export default styles;
