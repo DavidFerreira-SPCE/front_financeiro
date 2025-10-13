@@ -1,5 +1,6 @@
 // src/components/OrcamentoCard/index.tsx
 import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 import React from 'react';
 import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles"; // Importa os estilos locais
@@ -13,7 +14,7 @@ export function orcamentoCard() {
       </View>
       <Text style={styles.cardSubtitle}>Orçamento disponível</Text>
 
-      <TouchableOpacity style={styles.budgetButton}>
+      <TouchableOpacity style={styles.budgetButton} onPress={() => router.push('../orcamentoMensal')}> 
         <Text style={styles.orcamentotButtonText}>Definir orçamento</Text>
       </TouchableOpacity>
 

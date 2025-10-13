@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center'
     },
     modal: {
-        marginTop:600,
+        marginTop:"auto",
         width: '100%',
         backgroundColor: '#fff',
         borderRadius: 40,
