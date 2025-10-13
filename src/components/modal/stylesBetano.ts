@@ -1,16 +1,17 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    overlay: {
+    overlay: {  
         flex: 1,
         backgroundColor: 'rgba(0,0,0,0.5)',
         justifyContent: 'center',
         alignItems: 'center'
     },
     modal: {
-        width: '90%',
+        marginTop:600,
+        width: '100%',
         backgroundColor: '#fff',
-        borderRadius: 12,
+        borderRadius: 40,
         padding: 20
     },
     header: {
