@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { FlatList, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { styles } from "./styles";
 
-export function orcamentoMensal() {
+export function OrcamentoMensal() {
+  const [mesAno, setMesAno] = useState('');
+  const [valor, setValor] = useState('');
   const [orcamentos, setOrcamentos] = useState([
     { mes: 'Junho', ano: 2025, valor: 4500, ativo: true },
     { mes: 'Maio', ano: 2025, valor: 4200, ativo: true },
@@ -13,6 +15,7 @@ export function orcamentoMensal() {
     { mes: 'Janeiro', ano: 2025, valor: 4500, ativo: true },
     { mes: 'Dezembro', ano: 2024, valor: 4800, ativo: false },
   ]);
+
 
   return (
     <View style={styles.container}>
@@ -29,12 +32,16 @@ export function orcamentoMensal() {
             placeholder="00/0000"
             placeholderTextColor="#aaa"
             keyboardType="numeric"
+            value={mesAno}
+            onChangeText={setMesAno}
           />
           <TextInput
             style={styles.input}
             placeholder="R$ 0,00"
             placeholderTextColor="#aaa"
             keyboardType="numeric"
+            value={valor}
+            onChangeText={setValor}
           />
         </View>
 
@@ -80,4 +87,4 @@ export function orcamentoMensal() {
     </View>
   );
 }
-export default orcamentoMensal
+export default OrcamentoMensal

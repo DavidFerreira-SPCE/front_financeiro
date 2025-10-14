@@ -13,7 +13,7 @@ import { months } from "../utils/months";
 export default function HomeScreen() {
   const [selected, setSelected] = useState(months && months.length > 0 ? months[0].name : '');
   const [mostrarModal, setMostrarModal] = useState(false);
-  
+
   const handleLogout = () => {
     Alert.alert(
       'Você está deslogando...',
@@ -63,13 +63,13 @@ export default function HomeScreen() {
         <LancamentosList />
       </ScrollView>
 
-      {/* Botão Flutuante */}    
-<TouchableOpacity style={styles.flutuante} onPress={() => setMostrarModal(true)}>
-  <Ionicons name="add" size={28} color="#fff" />
-</TouchableOpacity>
+      {/* Botão Flutuante */}
+      <TouchableOpacity style={styles.flutuante} onPress={() => setMostrarModal(true)}>
+        <Ionicons name="add" size={28} color="#fff" />
+      </TouchableOpacity>
 
-   {/* Adicione logo abaixo do botão: */}
-  <ModalNovoLancamento visible={mostrarModal} onClose={() => setMostrarModal(false)} />
-</View>
+      {/* Adicione logo abaixo do botão: */}
+      <ModalNovoLancamento visible={mostrarModal} onClose={() => setMostrarModal(false)} />
+    </View>
   );
 }

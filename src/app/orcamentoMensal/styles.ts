@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
     fontSize: 14,
   },
   addButton: {
-    backgroundColor: '#d06',
+    backgroundColor: 'rgba(143, 11, 196, 0.81)',
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',

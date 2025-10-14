@@ -18,7 +18,7 @@ export function OrcamentoCard({ selectedMonth }: OrcamentoCardProps) {
       </View>
       <Text style={styles.cardSubtitle}>Orçamento disponível</Text>
 
-      <TouchableOpacity style={styles.budgetButton} onPress={() => router.push('../orcamentoMensal')}>
+      <TouchableOpacity style={styles.budgetButton} onPress={() => router.push("/orcamentoMensal")}> 
         <Text style={styles.orcamentotButtonText}>Definir orçamento</Text>
       </TouchableOpacity>
 
