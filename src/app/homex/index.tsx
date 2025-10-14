@@ -13,7 +13,6 @@ import { months } from "../utils/months";
 export default function HomeScreen() {
   const [selected, setSelected] = useState(months && months.length > 0 ? months[0].name : '');
   const [mostrarModal, setMostrarModal] = useState(false);
-
   
   const handleLogout = () => {
     Alert.alert(
@@ -60,8 +59,7 @@ export default function HomeScreen() {
       </View>
 
       <ScrollView contentContainerStyle={{ paddingBottom: 80 }}>
-        {/* Card Orçamento e Lançamentos */}
-        <OrcamentoCard />
+        <OrcamentoCard selectedMonth={selected} />
         <LancamentosList />
       </ScrollView>
 
