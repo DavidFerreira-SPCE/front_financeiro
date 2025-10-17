@@ -5,9 +5,7 @@ export const styles = StyleSheet.create({
         backgroundColor: "#111",
         borderRadius: 12,
         padding: 16,
-        // Adicionei margens para não colar nas bordas da tela
-        marginHorizontal: 16,
-        marginTop: 16,
+        marginTop: 'auto',
         marginBottom: 20,
     },
     cardHeader: {

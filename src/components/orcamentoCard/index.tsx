@@ -5,11 +5,15 @@ import React from 'react';
 import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "./styles"; // Importa os estilos locais
 
-export function orcamentoCard() {
+type OrcamentoCardProps = {
+  selectedMonth: string;
+}
+
+export function OrcamentoCard({ selectedMonth }: OrcamentoCardProps) {
   return (
     <View style={styles.budgetCard}>
       <View style={styles.cardHeader}>
-        <Text style={styles.cardTitle}>MAIO / 2025</Text>
+        <Text style={styles.cardTitle}>{selectedMonth.toUpperCase()} / 2025</Text>
         <Ionicons name="settings-outline" size={20} color="#fff" />
       </View>
       <Text style={styles.cardSubtitle}>Orçamento disponível</Text>

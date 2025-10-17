@@ -42,6 +42,7 @@ export default function ModalNovoLancamento({ visible, onClose }: Props) {
                         style={styles.input}
                         placeholder="Categoria"
                         placeholderTextColor={"grey"}
+                        keyboardType="default"
                         value={categoria}
                         onChangeText={setCategoria}
                     />
@@ -49,9 +50,10 @@ export default function ModalNovoLancamento({ visible, onClose }: Props) {
                     <View style={styles.row}>
                         <TextInput
                             style={[styles.input, { flex: 1, marginRight: 8 }]}
-                            placeholder="R$ 0,00"
+                            placeholder= 'R$ 0,00'
                             placeholderTextColor={"grey"}
                             keyboardType="numeric"
+                            keyboardAppearance="light"
                             value={valor}
                             onChangeText={setValor}
                         />
@@ -59,6 +61,7 @@ export default function ModalNovoLancamento({ visible, onClose }: Props) {
                             style={[styles.input, { flex: 1 }]}
                             placeholder="00/00/0000"
                             placeholderTextColor={"grey"}
+                            keyboardType="numeric"
                             value={data}
                             onChangeText={setData}
                         />
